@@ -2,12 +2,20 @@
 % Please edit documentation in R/val2014.R
 \name{val2014}
 \alias{val2014}
-\title{#' Election results function.
-#' @return Plot of the results.}
+\title{Election distribution plot.}
 \usage{
-val2014()
+val2014(val_data, lan_val, kommun_val)
+}
+\arguments{
+\item{val_data}{A number to choose election type}
+
+\item{lan_val}{A number to choose county}
+
+\item{kommun_val}{A number to choose city}
+}
+\value{
+A plot
 }
 \description{
-#' Election results function.
-#' @return Plot of the results.
+Election distribution plot.
 }

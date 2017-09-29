@@ -1,9 +1,13 @@
-#' 
-#' #' Election results function.
-#' #' @return Plot of the results.
-#' 
 
-val2014<- function(){
+#' Election distribution plot.
+#' 
+#' @param val_data A number to choose election type
+#' @param lan_val A number to choose county
+#' @param kommun_val A number to choose city
+#' @return A plot
+#' @export
+
+val2014<- function(val_data,lan_val,kommun_val){
   require("XML")
   require(stringr)
   require(ggplot2)
@@ -11,40 +15,10 @@ val2014<- function(){
   url <- "http://www.val.se/val/val2014/statistik/index.html"
   get_url <- getHTMLLinks(url)
   
-  res <- get_url[str_sub(get_url, start= -10)=="kommun.skv"]
-  val<-data.frame("Val"=res)
-  print(val)
-  val_data<-as.numeric(readline(prompt="Valj data: "))
-  while(!(val_data>0 && val_data<=length(res))){
-    print(val)
-    val
-    warn<-paste("***Pick a number between 1 and ",length(res),sep="")
-val_data<-as.numeric(readline(prompt=paste(warn,"\nValj data:",sep="")))
-  }
-  hejsan <- paste("http://www.val.se/val/val2014/statistik/",res[val_data],sep="")
-  zz<-read.csv2(as.character(hejsan))
-  print(data.frame(unique(zz[,3])))
-  
-  lan_val <- as.numeric(readline(prompt="Valj lan: "))
-  while(!(lan_val>0 && lan_val<=length(unique(zz[,3])))){
-    print(data.frame(unique(zz[,3])))
-    
-    warn<-paste("***Pick a number between 1 and ",length(unique(zz[,3])),sep="")
-    lan_val<-as.numeric(readline(prompt=paste(warn,"\nValj data:",sep="")))
-  }
-  
-  yy <- zz[zz[,3]==unique(zz[,3])[lan_val],]
-  print(data.frame(unique(yy[,4])))
-  
-  kommun_val <- as.numeric(readline(prompt="Valj kommun: "))
-  
-  
-  while(!(kommun_val>0 && kommun_val<=length(unique(yy[,4])))){
-    print(data.frame(unique(yy[,4])))
-    
-    warn<-paste("***Pick a number between 1 and ",length(unique(yy[,4])),sep="")
-    kommun_val<-as.numeric(readline(prompt=paste(warn,"\nValj data:",sep="")))
-  }
+  res <<- get_url[str_sub(get_url, start= -10)=="kommun.skv"]
+    hejsan <- paste("http://www.val.se/val/val2014/statistik/",res[val_data],sep="")
+  zz<<-read.csv2(as.character(hejsan))
+  yy <<- zz[zz[,3]==unique(zz[,3])[lan_val],]
   
   
   xx <- yy[yy[,4]==unique(yy[,4])[kommun_val],]
@@ -65,4 +39,3 @@ p<-ggplot(parti_proc)+
   theme(panel.grid.major.y = element_line(color = "dark grey"))
 return(p)
 }
-
