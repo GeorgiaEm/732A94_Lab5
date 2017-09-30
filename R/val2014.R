@@ -1,4 +1,3 @@
-
 #' Election distribution plot.
 #' @return A plot
 #' @export
