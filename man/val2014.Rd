@@ -4,14 +4,7 @@
 \alias{val2014}
 \title{Election distribution plot.}
 \usage{
-val2014(val_data, lan_val, kommun_val)
-}
-\arguments{
-\item{val_data}{A number to choose election type}
-
-\item{lan_val}{A number to choose county}
-
-\item{kommun_val}{A number to choose city}
+val2014()
 }
 \value{
 A plot
