@@ -1,10 +1,9 @@
 
 #' Election distribution plot.
-#' 
 #' @return A plot
 #' @export
 val2014<- function(){
-  require("XML")
+  require(XML)
   require(stringr)
   require(stringi)
   require(ggplot2)
@@ -25,4 +24,4 @@ val2014<- function(){
   Kommunval<<-zz[[3]]
   return(zz)
 }
-hej<-val2014()
+#hej<-val2014()
