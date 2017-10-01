@@ -13,14 +13,15 @@ val2014<- function(){
   zz<-list()
   for (i in 1:length(hejsan)){
     zz[[i]]<-read.csv2(as.character(hejsan)[i])
-    colnames(zz[[i]])<-stringi::stri_trans_general(colnames(zz[[i]]), "latin-ascii")
+    colnames(zz[[i]])<-stri_trans_general(colnames(zz[[i]]), "latin-ascii")
     
   }
   zz<-list("Riksdagsval"=zz[[1]][1:20],"Landstingsval"=zz[[2]][1:20],"Kommunval"=zz[[3]][1:20])
-  stri_trans_general(zz, "latin-ascii")
   Riksdagsval<<-zz[[1]]
   Landstingsval<<-zz[[2]]
   Kommunval<<-zz[[3]]
   return(zz)
 }
 #hej<-val2014()
+#runGitHub("732A94_Lab5_shiny","GeorgiaEm")
+
