@@ -6,7 +6,7 @@ context("Val2014")
   
   
   test_that("class is correct", {
-    output <- val2014()
+    output <- Val2014()
     
     expect_true(class(output) == "list")
   })

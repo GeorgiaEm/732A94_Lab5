@@ -1,7 +1,7 @@
 #' Election distribution plot.
 #' @return A plot
 #' @export
-val2014<- function(){
+Val2014<- function(){
   require(XML)
   require(stringr)
   require(stringi)
