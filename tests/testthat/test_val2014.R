@@ -1,5 +1,5 @@
 context("val2014")
-output <- val2014()
+# output <- val2014()
 
 # test_that("Assignment: val2014()", {
 #   expect_true(exists("val2014"), info = "No object 'val2014' exists.")
