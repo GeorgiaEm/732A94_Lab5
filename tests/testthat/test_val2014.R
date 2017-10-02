@@ -8,7 +8,7 @@ context("val2014")
   test_that("class is correct", {
     output <- val2014()
     
-    expect_true(class(output)[1] == "list")
+    expect_true(class(output) == "list")
   })
 #   
 #   expect_is(val2014, class = "function", info = "Object 'val2014' is not a function.")
