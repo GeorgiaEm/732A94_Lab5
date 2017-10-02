@@ -1,4 +1,4 @@
-context("val2014")
+context("Val2014")
 
 # test_that("Assignment: val2014()", {
 #   output <- val2014()
