@@ -1,14 +1,15 @@
 context("Val2014")
-
+Val2014()
 # test_that("Assignment: val2014()", {
 #   output <- val2014()
 #   expect_true(exists("val2014"), info = "No object 'val2014' exists.")
   
   
   test_that("class is correct", {
-    output <- Val2014()
+    # output <- Val2014()
     
-    expect_true(class(output) == "list")
+    expect_true(any(colnames(output[[1]])=="KOMMUN"), info = "There is no column named 'KOMMUN' in the first data set")
+    # expect_true(class(output) == "list")
   })
 #   
 #   expect_is(val2014, class = "function", info = "Object 'val2014' is not a function.")
