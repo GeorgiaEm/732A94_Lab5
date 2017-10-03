@@ -14,7 +14,6 @@ Val2014<- function(){
   for (i in 1:length(hejsan)){
     zz[[i]]<-read.csv2(as.character(hejsan)[i])
     colnames(zz[[i]])<-stri_trans_general(colnames(zz[[i]]), "latin-ascii")
-    
   }
   zz<-list("Riksdagsval"=zz[[1]][1:20],"Landstingsval"=zz[[2]][1:20],"Kommunval"=zz[[3]][1:20])
   Riksdagsval<<-zz[[1]]
