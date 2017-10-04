@@ -8,6 +8,9 @@ vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
 ---
+```{r}
+require(Val2014)
+```
 
 Every forth year there is election in Sweden. 
 
