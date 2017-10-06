@@ -7,7 +7,7 @@ Author: Erika Anderskar, Georgia Mushe
 Maintainer: <eanderskar@gmail.com>, <georgiamushe@gmail.com>
 Description: This functions takes the relative frequeces for a specific election, count and city and plot the distribution of the eight biggest parties in Sweden.
 License: GPL-3
-Imports: ggplot2,XML
+Imports: ggplot2,XML,httr, readxl,
 Suggests: testthat, XML,stringr,stringi, ggplot2,
     knitr, httr, readxl,
     rmarkdown

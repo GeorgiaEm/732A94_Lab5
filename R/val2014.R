@@ -8,7 +8,6 @@ val2014<- function(){
   require(stringi)
   require(ggplot2)
   require(readxl)
-  require(xlsx)
   require(httr)
   url <- "http://www.val.se/val/val2014/statistik/index.html"
   get_url <- getHTMLLinks(url)
