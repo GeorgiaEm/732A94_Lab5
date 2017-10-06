@@ -37,7 +37,3 @@ val2014<- function(){
   Kommunval<<-zz[[3]]
   return(zz)
 }
-
-#hej<-val2014()
-#runGitHub("732A94_Lab5_shiny","GeorgiaEm")
-

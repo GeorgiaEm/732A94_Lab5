@@ -8,10 +8,22 @@ vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
 ---
-```{r}
+```{r, include=FALSE, }
 require(Val2014)
+require(shiny)
+val_data<-val2014()
+
 ```
 
+```{r, eval=FALSE }
+val_data<-val2014()
+
+```
+
+```{r}
+
+val_data[[1]][1:5,1:8]
+```
 Every forth year there is election in Sweden. 
 
 Above all, there is general elction to the national law-making assembly, but also election to the county councils (landsting) and municipals (kommuner).
@@ -20,6 +32,9 @@ Valmyndigheten (Election  Authority) complies and delivers statistics reagarding
 
 The package Val2014 includes a function Val2014 which downloads data from the election authority and returns a list of 3 data.frames, one for each of the elections. 
 
-Val2014 comes with a Shiney application which allows you to see the polls between the different partys in the muncipal of your choice. You can also select which election you would like to see the result from. 
+Val2014 comes with a Shiny application which allows you to see the polls between the different partys in the muncipal of your choice. You can also select which election you would like to see the result from. To get to the shiny application use the following command
 
-The
+```{r, eval=FALSE}
+runGitHub("732A94_Lab5_shiny","GeorgiaEm")
+
+```
