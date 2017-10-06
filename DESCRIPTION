@@ -9,7 +9,7 @@ Description: This functions takes the relative frequeces for a specific election
 License: GPL-3
 Imports: ggplot2,XML
 Suggests: testthat, XML,stringr,stringi, ggplot2,
-    knitr,
+    knitr, httr, readxl,
     rmarkdown
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
